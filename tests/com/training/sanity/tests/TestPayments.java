@@ -11,15 +11,17 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.training.generics.ScreenShot;
+import com.training.pom.TestAdminPOM;
+import com.training.pom.TestMemPOM;
 import com.training.pom.TestPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
-
-public class LoginTest{
+public class TestPayments {
 	private WebDriver driver;
 	private String baseUrl;
-	private  TestPOM testPOM;
+	private  TestAdminPOM testadminPOM;
+	private TestMemPOM testmemPOM;
 	private static Properties properties;
 	private ScreenShot screenShot;
 
@@ -29,72 +31,52 @@ public class LoginTest{
 		FileInputStream inStream = new FileInputStream("./resources/others.properties");
 		properties.load(inStream);
 	}
-
-	
 	@BeforeClass
 	public void setUp() throws Exception {
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
-		testPOM = new TestPOM(driver); 
+		//testPOM = new TestPOM(driver); 
+		testmemPOM=new TestMemPOM(driver);
+		testadminPOM = new TestAdminPOM(driver);
 		baseUrl = properties.getProperty("baseURL");
 		screenShot = new ScreenShot(driver); 
 		// open the browser 
 		driver.get(baseUrl);
 	}
-	
-
 	@AfterMethod
 	public void tearDown() throws Exception {
 		Thread.sleep(1000);
 		//driver.quit();
 	}
-	
 	@Test
-	public void validLoginTest() {
+	public void validLoginTest() throws InterruptedException {
 		
-		testPOM.sendUserName("admin");
-		testPOM.pwd1();
-		testPOM.pwd2();
-		testPOM.pwd3();
-		testPOM.pwd4();
-
-
-		testPOM.SubmitBtn(); 
+		testadminPOM.sendUserName("admin");
+		testadminPOM.pwd1();
+		testadminPOM.pwd2();
+		testadminPOM.pwd3();
+		testadminPOM.pwd4();
+		testadminPOM.SubmitBtn(); 
+		Thread.sleep(3000);
 	}
-		
-		@Test (priority=1)
-		public void accountLink(){
-			testPOM.account(); 
-		}
-		
-		@Test (priority=2)
-		public void memPayClick(){
-		testPOM.payment(); 
-		}
-		
-		@Test (priority=3)
-		public void memInput() throws InterruptedException{
-		testPOM.memberUserName("R"); 
-		Thread.sleep(4000);
-		//testPOM.memberName("samsaravananam"); 
-		testPOM.amount("10,00"); 
-		testPOM.description("system");
-		testPOM.SubmitBtn1(); 
-		}
-		
-		
-		@Test (priority=4)
-		public void finalSubmit(){
-		testPOM.SubmitBtn2(); 
-		screenShot.captureScreenShot("First");
-		}
-		
+	@Test (priority=1)
+	public void memInput() throws InterruptedException{
+		testmemPOM.memUsername("R");
+		Thread.sleep(2000);
+		testmemPOM.makePayment();
+		Thread.sleep(2000);
+		testmemPOM.memAmount();
+		Thread.sleep(2000);
+		testmemPOM.select();
 
+		testmemPOM.desc();
+		Thread.sleep(2000);
+		testmemPOM.btn1();
+		Thread.sleep(2000);
+		testmemPOM.btn2();
+		Thread.sleep(2000);
+		testmemPOM.btn3();
+		Thread.sleep(2000);
+		testmemPOM.accinfo();
 
-
-
-
-
-		
-		
-	
+	}
 }

@@ -42,7 +42,7 @@ public class StatisticalTests {
 	@AfterMethod
 	public void tearDown() throws Exception {
 		Thread.sleep(1000);
-		driver.quit();
+		//driver.quit();
 	}
 	@Test
 	public void validLoginTest() {
@@ -52,7 +52,10 @@ public class StatisticalTests {
 		TestPOM.pwd3();
 		TestPOM.pwd4();
 		TestPOM.SubmitBtn(); 
-		screenShot.captureScreenShot("First");
+		TestPOM.Report();
+		TestPOM.Statistical();
+		TestPOM.Key();
+		//screenShot.captureScreenShot("First");
 	}
 
 }

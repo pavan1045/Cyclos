@@ -35,6 +35,15 @@ private WebDriver driver;
 	@FindBy(xpath="//input[@value='Submit']")
 	private WebElement SubmitBtn; 
 	
+	@FindBy(xpath="//*[@id='menu13']/span[2]")
+	private WebElement Report;
+	
+	@FindBy(xpath="//*[@id='submenu13.3']/span[2]")
+	private WebElement Statistical;
+	
+	@FindBy(xpath="//input[@linkurl='statisticsKeyDevelopments']")
+	private WebElement Key;
+	
 	public void sendUserName(String userName) {
 		this.userName.clear();
 		this.userName.sendKeys(userName);
@@ -65,5 +74,16 @@ private WebDriver driver;
 		this.SubmitBtn.click(); 
 	}
 
+	 public void Report(){
+		 this.Report.click();
+	 }
 
+	 public void Statistical(){
+		 this.Statistical.click();
+	 }
+	 
+	 
+	 public void Key(){
+		 this.Key.click();
+	 }
 }

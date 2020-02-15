@@ -5,12 +5,12 @@ public class LoginBean {
 	private String fullName;
 	private String Email;
 	private String Address;
-	private int postalCode;
+	private String postalCode;
 	private String city;
 
 	private String phone;
 	private String mobilePhone;
-	private int fax;
+	private String fax;
 	private String url;
 	private String password;
 	private String confirmPassword;
@@ -26,7 +26,7 @@ public class LoginBean {
 	public LoginBean() {
 	}
 
-	public LoginBean(String loginName, String fullName,String Email,String Address,int postalCode,String city,String phone,String mobilePhone,int fax,String url,String password,String confirmPassword) {
+	public LoginBean(String loginName, String fullName,String Email,String Address,String postalCode,String city,String phone,String mobilePhone,String fax,String url,String password,String confirmPassword) {
 		super();
 		this.loginName = loginName;
 		this.fullName = fullName;
@@ -75,11 +75,11 @@ public class LoginBean {
 		this.Address = Address;
 	}
 	
-	public int getpostalCode() {
+	public String getpostalCode() {
 		return postalCode;
 	}
 
-	public void setpostalCode(int postalCode) {
+	public void setpostalCode(String postalCode) {
 		this.postalCode = postalCode;
 	}
 	
@@ -108,11 +108,11 @@ public class LoginBean {
 		this.mobilePhone = mobilePhone;
 	}
 	
-	public int getfax() {
+	public String getfax() {
 		return fax;
 	}
 
-	public void setfax(int fax) {
+	public void setfax(String fax) {
 		this.fax = fax;
 	}
 	

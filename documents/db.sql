@@ -6,16 +6,16 @@ password varchar(50));
 //insert into login values("admin", "admin@123"); 
 //insert into login values("naveen", "testing@123"); 
 insert into cyclos values();*/
-create table reg1(
+create table regt2(
  loginName varchar(20),
  fullName varchar(20),
  Email varchar(20),
  Address varchar(20),
- postalCode INTEGER(20),
+ postalCode varchar(20),
  city varchar(20),
  phone varchar(50),
  mobilePhone varchar(50),
- fax INTEGER(20) ,
+ fax varchar(20) ,
  url varchar(20) ,
  password varchar(20),
  confirmPassword varchar(20)

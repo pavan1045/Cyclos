@@ -81,12 +81,10 @@ public class ApachePOIExcelRead {
 						}
 						break;
 					case Cell.CELL_TYPE_BLANK:
-					{
-						if(cell.getStringCellValue()==null)
-						{
-							
-						}
-					}
+					
+					      tempList1[cellCount]="";
+					      break;
+					
 					}
 					cellCount ++; 
 				}

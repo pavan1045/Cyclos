@@ -23,7 +23,7 @@ private WebDriver driver;
 	private WebElement fullName;
 	
 	@FindBy(name="member(email)")
-	private WebElement email;
+	private WebElement Email;
 	
 	@FindBy(xpath="//input[@fieldname='birthday']")
 	private WebElement birthday;
@@ -90,17 +90,20 @@ private WebDriver driver;
 		this.fullName.sendKeys(fullName);
 	}
 	
-	public void sendEmail(String email){
-		this.email.sendKeys(email);
+	public void sendEmail(String Email){
+		this.Email.sendKeys(Email);
 	}
 	
-	/*public void sendBirthday(String birthday){
+	public void sendBirthday(String birthday){
 		this.birthday.sendKeys(birthday);
 	}
-*/	
+
+	public void gender()
+	{
+		this.Female.click();
+	}
 	
-	
-	public void gender(String Gender){
+	/*public void gender(String Gender){
 		System.out.println(Gender);
 		if(Gender=="Female")
 		{
@@ -111,12 +114,12 @@ private WebDriver driver;
 			this.Male.click();
 		}
 		
-	}
+	}*/
 	public void sendAdress(String address){
 		this.address.sendKeys(address);
 	}
-	public void sendPostalCode(String code){
-		this.code.sendKeys(code);
+	public void sendPostalCode(String postalCode){
+		this.code.sendKeys(postalCode);
 	}
 	public void sendCity(String city){
 		this.city.sendKeys(city);
@@ -129,8 +132,8 @@ private WebDriver driver;
 	public void sendPhone(String phone){
 		this.phone.sendKeys(phone);
 	}
-	public void sendMobile(String mobile){
-		this.mobile.sendKeys(mobile);
+	public void sendMobile(String mobilePhone){
+		this.mobile.sendKeys(mobilePhone);
 	}
 	public void sendFax(String fax){
 		this.fax.sendKeys(fax);
@@ -138,11 +141,11 @@ private WebDriver driver;
 	public void sendUrl(String url){
 		this.url.sendKeys(url);
 	}
-	public void sendPass(String pass){
-		this.pass.sendKeys(pass);
+	public void sendPass(String password){
+		this.pass.sendKeys(password);
 	}
-	public void sendConfirm(String confirm){
-		this.confirm.sendKeys(confirm);
+	public void sendConfirm(String confirmPassword){
+		this.confirm.sendKeys(confirmPassword);
 	}
 	public void sendCaptcha(){
 		this.captcha.click();
@@ -151,6 +154,17 @@ private WebDriver driver;
 	public void clickSave(){
 		this.saveBtn.click();;
 	}
+	@FindBy(id="btn")
+	private WebElement ok;
+	
+	public void ok()
+	{
+		this.ok.click();
+	}
+	public void clicksubmit(){
+		this.clkSubBut.click();
+	}
+	
 	
 	
 	

@@ -27,13 +27,21 @@ public class RegisterTest {
 	private ScreenShot screenShot;
 
 	@BeforeClass
-	public static void setUpBeforeClass() throws IOException {
+	public  void setUpBeforeClass() throws IOException {
 		properties = new Properties();
 		FileInputStream inStream = new FileInputStream("./resources/others.properties");
 		properties.load(inStream);
-	}
+		driver = DriverFactory.getDriver(DriverNames.CHROME);
+		RegisterPOM = new RegisterPOM(driver); 
+		baseUrl = properties.getProperty("baseURL");
+		screenShot = new ScreenShot(driver); 
+		// open the browser 
+		driver.get(baseUrl);
 
-	@BeforeMethod
+			}
+	
+
+	/*@BeforeMethod
 	public void setUp() throws Exception {
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		RegisterPOM = new RegisterPOM(driver); 
@@ -41,7 +49,7 @@ public class RegisterTest {
 		screenShot = new ScreenShot(driver); 
 		// open the browser 
 		driver.get(baseUrl);
-	}
+	}*/
 	
 	@AfterMethod
 	public void tearDown() throws Exception {
@@ -49,31 +57,35 @@ public class RegisterTest {
 		//driver.quit();
 	}
 	@Test (dataProvider="Excel", dataProviderClass=LoginDataProviders.class)
-	public void validLoginTest(String Login_name,String Full_name,String E_Mail,String Birthday,String Gender,String Address,String Postal_Code,String City,String Phone,String MobilePhone,String Fax,String Url,String Password,String ConfirmPassword) throws InterruptedException {
+	public void validLoginTest(String loginName,String fullName,String Email,String Address,String postalCode,String city,String phone,String mobilePhone,String fax,String url,String password,String confirmPassword) throws InterruptedException {
 		RegisterPOM.clicksubmit1();
-		RegisterPOM.sendloginName(Login_name);
-		RegisterPOM.sendFullName(Full_name);
-		RegisterPOM.sendEmail(E_Mail);
-		//RegisterPOM.sendBirthday(Birthday);
+		RegisterPOM.sendloginName(loginName);
+		RegisterPOM.sendFullName(fullName);
+		RegisterPOM.sendEmail(Email);
+		RegisterPOM.sendBirthday("1998/09/17");
 		Thread.sleep(3000);
-		RegisterPOM.gender(Gender);
+		RegisterPOM.gender();
 		RegisterPOM.sendAdress(Address);
-		RegisterPOM.sendPostalCode(Postal_Code);
-		RegisterPOM.sendCity(City);
+		RegisterPOM.sendPostalCode(postalCode);
+		RegisterPOM.sendCity(city);
 		RegisterPOM.sendArea();
-		RegisterPOM.sendPhone(Phone);
-		RegisterPOM.sendMobile(MobilePhone);
-		RegisterPOM.sendFax(Fax);
-		RegisterPOM.sendUrl(Url);
-		RegisterPOM.sendPass(Password);
-		RegisterPOM.sendConfirm(ConfirmPassword);
+		RegisterPOM.sendPhone(phone);
+		RegisterPOM.sendMobile(mobilePhone);
+		RegisterPOM.sendFax(fax);
+		RegisterPOM.sendUrl(url);
+		RegisterPOM.sendPass(password);
+		RegisterPOM.sendConfirm(confirmPassword);
 		JavascriptExecutor js=(JavascriptExecutor)driver;
 		js.executeScript("window.scrollTo(-500,document.body.scrollHeight)" );
 		RegisterPOM.sendCaptcha();
 		Thread.sleep(9000);
 		RegisterPOM.clickSave();
-		Alert a=driver.switchTo().alert();	
-	    a.accept();
+		//Alert a=driver.switchTo().alert();	
+	  // a.accept();
+		RegisterPOM.ok();
+	
+
+
 
 				
 		//screenShot.captureScreenShot("First");

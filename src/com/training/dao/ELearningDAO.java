@@ -47,7 +47,7 @@ public class ELearningDAO {
 
 				temp.setAddress(gc.rs1.getString(4));
 
-				temp.setpostalCode(gc.rs1.getInt(5));
+				temp.setpostalCode(gc.rs1.getString(5));
 
 				temp.setcity(gc.rs1.getString(6));
 
@@ -55,7 +55,7 @@ public class ELearningDAO {
 
 				temp.setmobilePhone(gc.rs1.getString(8));
 
-				temp.setfax(gc.rs1.getInt(9));
+				temp.setfax(gc.rs1.getString(9));
 
 				temp.seturl(gc.rs1.getString(10));
 

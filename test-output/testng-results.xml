@@ -1,61 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="24433" started-at="2020-02-12T11:58:19Z" finished-at="2020-02-12T11:58:43Z">
+  <suite name="Default suite" duration-ms="24663" started-at="2020-02-15T11:21:01Z" finished-at="2020-02-15T11:21:25Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="24433" started-at="2020-02-12T11:58:19Z" finished-at="2020-02-12T11:58:43Z">
-      <class name="com.training.sanity.tests.LoginTest">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.LoginTest@6f7fd0e6]" name="setUpBeforeClass" is-config="true" duration-ms="15" started-at="2020-02-12T11:58:19Z" finished-at="2020-02-12T11:58:19Z">
+    <test name="Default test" duration-ms="24663" started-at="2020-02-15T11:21:01Z" finished-at="2020-02-15T11:21:25Z">
+      <class name="com.training.sanity.tests.TestMess">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.TestMess@47c62251]" name="setUpBeforeClass" is-config="true" duration-ms="16" started-at="2020-02-15T11:21:01Z" finished-at="2020-02-15T11:21:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.LoginTest@6f7fd0e6]" name="setUp" is-config="true" duration-ms="11989" started-at="2020-02-12T11:58:19Z" finished-at="2020-02-12T11:58:31Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.TestMess@47c62251]" name="setUp" is-config="true" duration-ms="12261" started-at="2020-02-15T11:21:01Z" finished-at="2020-02-15T11:21:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validLoginTest()[pri:0, instance:com.training.sanity.tests.LoginTest@6f7fd0e6]" name="validLoginTest" duration-ms="1277" started-at="2020-02-12T11:58:31Z" finished-at="2020-02-12T11:58:32Z">
+        <test-method status="PASS" signature="validLoginTest()[pri:0, instance:com.training.sanity.tests.TestMess@47c62251]" name="validLoginTest" duration-ms="1320" started-at="2020-02-15T11:21:13Z" finished-at="2020-02-15T11:21:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLoginTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.LoginTest@6f7fd0e6]" name="tearDown" is-config="true" duration-ms="1006" started-at="2020-02-12T11:58:32Z" finished-at="2020-02-12T11:58:33Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.TestMess@47c62251]" name="tearDown" is-config="true" duration-ms="1010" started-at="2020-02-15T11:21:14Z" finished-at="2020-02-15T11:21:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="accountLink()[pri:1, instance:com.training.sanity.tests.LoginTest@6f7fd0e6]" name="accountLink" duration-ms="101" started-at="2020-02-12T11:58:33Z" finished-at="2020-02-12T11:58:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- accountLink -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.LoginTest@6f7fd0e6]" name="tearDown" is-config="true" duration-ms="1016" started-at="2020-02-12T11:58:33Z" finished-at="2020-02-12T11:58:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="memPayClick()[pri:2, instance:com.training.sanity.tests.LoginTest@6f7fd0e6]" name="memPayClick" duration-ms="355" started-at="2020-02-12T11:58:34Z" finished-at="2020-02-12T11:58:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- memPayClick -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.LoginTest@6f7fd0e6]" name="tearDown" is-config="true" duration-ms="1010" started-at="2020-02-12T11:58:35Z" finished-at="2020-02-12T11:58:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="memInput()[pri:3, instance:com.training.sanity.tests.LoginTest@6f7fd0e6]" name="memInput" duration-ms="4862" started-at="2020-02-12T11:58:36Z" finished-at="2020-02-12T11:58:40Z">
+        <test-method status="PASS" signature="memInput(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.training.sanity.tests.TestMess@47c62251]" name="memInput" duration-ms="8200" started-at="2020-02-15T11:21:16Z" data-provider="cyclos" finished-at="2020-02-15T11:21:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Roja]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Roja]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[loan]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[repayment]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- memInput -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.LoginTest@6f7fd0e6]" name="tearDown" is-config="true" duration-ms="1004" started-at="2020-02-12T11:58:40Z" finished-at="2020-02-12T11:58:41Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.TestMess@47c62251]" name="tearDown" is-config="true" duration-ms="1019" started-at="2020-02-15T11:21:24Z" finished-at="2020-02-15T11:21:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="finalSubmit()[pri:4, instance:com.training.sanity.tests.LoginTest@6f7fd0e6]" name="finalSubmit" duration-ms="752" started-at="2020-02-12T11:58:41Z" finished-at="2020-02-12T11:58:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalSubmit -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.LoginTest@6f7fd0e6]" name="tearDown" is-config="true" duration-ms="1009" started-at="2020-02-12T11:58:42Z" finished-at="2020-02-12T11:58:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.training.sanity.tests.LoginTest -->
+      </class> <!-- com.training.sanity.tests.TestMess -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

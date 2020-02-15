@@ -19,9 +19,12 @@ public class LoginDataProviders {
 		Object[][] result = new Object[list.size()][]; 
 		int count = 0; 
 		for(LoginBean temp : list){
-			Object[]  obj = new Object[2]; 
-			obj[0] = temp.getUserName(); 
-			obj[1] = temp.getPassword(); 
+			Object[]  obj = new Object[2];
+			
+			obj[0] = temp.getMember_login(); 
+			obj[1] = temp.getSubject();
+			obj[2] = temp.getBody();
+			
 			
 			result[count ++] = obj; 
 		}
@@ -35,6 +38,13 @@ public class LoginDataProviders {
 		String fileName ="C:/Users/Naveen/Desktop/Testing.xlsx"; 
 		return new ApachePOIExcelRead().getExcelContent(fileName); 
 	}
+	
+	@DataProvider(name="cyclos")
+	public Object[][] getExcelData1(){
+		String FileName="C:\\Users\\IBM\\Desktop\\chinni111111.xlsx";
+		return new ApachePOIExcelRead().getExcelContent(FileName);
+	}
+			
 	
 	@DataProvider(name = "xls-inputs")
 	public Object[][] getXLSData(){

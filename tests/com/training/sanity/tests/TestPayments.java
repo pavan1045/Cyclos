@@ -47,7 +47,7 @@ public class TestPayments {
 		Thread.sleep(1000);
 		//driver.quit();
 	}
-	@Test
+	@Test (priority=1)
 	public void validLoginTest() throws InterruptedException {
 		
 		testadminPOM.sendUserName("admin");
@@ -58,7 +58,7 @@ public class TestPayments {
 		testadminPOM.SubmitBtn(); 
 		Thread.sleep(3000);
 	}
-	@Test (priority=1)
+	@Test (priority=2)
 	public void memInput() throws InterruptedException{
 		testmemPOM.memUsername("R");
 		Thread.sleep(2000);

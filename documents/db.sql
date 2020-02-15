@@ -1,7 +1,9 @@
-create table login(
-username varchar(50) not null,
-password varchar(50));
+create table messages(member_login varchar(20) not null,subject varchar(20),body varchar(20) not null);
 
 
-insert into login values("admin", "admin@123"); 
-insert into login values("naveen", "testing@123"); 
+insert into messages values("R","loan","repayment"); 
+insert into messages values("m","loan","repayment"); 
+
+
+
+

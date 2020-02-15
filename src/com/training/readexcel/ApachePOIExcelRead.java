@@ -5,6 +5,8 @@ import java.io.FileInputStream;
 import java.util.Iterator;
 
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.CreationHelper;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -32,6 +34,9 @@ public class ApachePOIExcelRead {
 
 			// Get first/desired sheet from the workbook
 			XSSFSheet sheet = workbook.getSheetAt(0);
+			//XSSFSheet sheet1 = workbook.createSheet("Date Formats");
+			
+			
 			
 			int rowTotal = sheet.getLastRowNum();
 
@@ -44,6 +49,9 @@ public class ApachePOIExcelRead {
 			Iterator<Row> rowIterator = sheet.iterator();
 			 list1 = new String[rowTotal][2];
 			 
+		       
+
+			 
 			while (rowIterator.hasNext()) {
 				Row row = rowIterator.next();
 				// For each row, iterate through all the columns
@@ -54,6 +62,7 @@ public class ApachePOIExcelRead {
 				String[] tempList1 = new String[noOfColumns];
 				
 				
+
 				
 				while (cellIterator.hasNext()) {
 					Cell cell = cellIterator.next();
@@ -71,6 +80,13 @@ public class ApachePOIExcelRead {
 							tempList1[cellCount] =cell.getStringCellValue();
 						}
 						break;
+					case Cell.CELL_TYPE_BLANK:
+					{
+						if(cell.getStringCellValue()==null)
+						{
+							
+						}
+					}
 					}
 					cellCount ++; 
 				}
@@ -88,14 +104,6 @@ public class ApachePOIExcelRead {
 		return list1;
 	}
 
-	public static void main(String[] args) {
-		String fileName = "C:/Users/Naveen/Desktop/Testing.xlsx";
 		
-		for(String [] temp : new ApachePOIExcelRead().getExcelContent(fileName)){
-			for(String  tt : temp){
-				System.out.println(tt);
-			}
-		}
 
 	}
-}

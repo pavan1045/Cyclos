@@ -50,9 +50,9 @@ public class LoginExcelTest {
 
 	@Test(dataProvider = "excel-inputs", dataProviderClass = LoginDataProviders.class)
 	public void loginDBTest(String userName, String password) {
-		loginPOM.sendUserName(userName);
+		loginPOM.sendLoginName(userName);
 		loginPOM.sendPassword(password);
-		loginPOM.clickLoginBtn();
+		loginPOM.clickSubmit();
 		screenShot.captureScreenShot(userName);
 
 	}

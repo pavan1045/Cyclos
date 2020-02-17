@@ -1,29 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16920" started-at="2020-02-12T04:56:42Z" finished-at="2020-02-12T04:56:59Z">
+  <suite name="Default suite" duration-ms="23023" started-at="2020-02-17T11:36:24Z" finished-at="2020-02-17T11:36:47Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="16920" started-at="2020-02-12T04:56:42Z" finished-at="2020-02-12T04:56:59Z">
-      <class name="com.training.sanity.tests.LoginTests">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.LoginTests@6f7fd0e6]" name="setUpBeforeClass" is-config="true" duration-ms="15" started-at="2020-02-12T04:56:42Z" finished-at="2020-02-12T04:56:42Z">
+    <test name="Default test" duration-ms="23023" started-at="2020-02-17T11:36:24Z" finished-at="2020-02-17T11:36:47Z">
+      <class name="com.training.sanity.tests.Test3">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.Test3@29774679]" name="setUpBeforeClass" is-config="true" duration-ms="14036" started-at="2020-02-17T11:36:24Z" finished-at="2020-02-17T11:36:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.LoginTests@6f7fd0e6]" name="setUp" is-config="true" duration-ms="12151" started-at="2020-02-12T04:56:42Z" finished-at="2020-02-12T04:56:55Z">
+        <test-method status="PASS" signature="login()[pri:1, instance:com.training.sanity.tests.Test3@29774679]" name="login" duration-ms="1377" started-at="2020-02-17T11:36:38Z" finished-at="2020-02-17T11:36:39Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validLoginTest()[pri:0, instance:com.training.sanity.tests.LoginTests@6f7fd0e6]" name="validLoginTest" duration-ms="2791" started-at="2020-02-12T04:56:55Z" finished-at="2020-02-12T04:56:57Z">
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="validStep_3(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.training.sanity.tests.Test3@29774679]" name="validStep_3" duration-ms="1710" started-at="2020-02-17T11:36:40Z" data-provider="Cyclos" finished-at="2020-02-17T11:36:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ ]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ ]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validLoginTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.LoginTests@6f7fd0e6]" name="tearDown" is-config="true" duration-ms="1927" started-at="2020-02-12T04:56:57Z" finished-at="2020-02-12T04:56:59Z">
+        </test-method> <!-- validStep_3 -->
+        <test-method status="PASS" signature="validStep_3(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.training.sanity.tests.Test3@29774679]" name="validStep_3" duration-ms="1655" started-at="2020-02-17T11:36:42Z" data-provider="Cyclos" finished-at="2020-02-17T11:36:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sunil]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ ]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ ]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.training.sanity.tests.LoginTests -->
+        </test-method> <!-- validStep_3 -->
+        <test-method status="PASS" signature="validStep_3(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.training.sanity.tests.Test3@29774679]" name="validStep_3" duration-ms="1552" started-at="2020-02-17T11:36:44Z" data-provider="Cyclos" finished-at="2020-02-17T11:36:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mariya]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[helloo]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ ]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validStep_3 -->
+        <test-method status="PASS" signature="validStep_3(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.training.sanity.tests.Test3@29774679]" name="validStep_3" duration-ms="1619" started-at="2020-02-17T11:36:45Z" data-provider="Cyclos" finished-at="2020-02-17T11:36:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SUNIL]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[MARIYA]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[HELLO]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validStep_3 -->
+      </class> <!-- com.training.sanity.tests.Test3 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

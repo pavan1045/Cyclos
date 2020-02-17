@@ -36,6 +36,13 @@ public class LoginDataProviders {
 		return new ApachePOIExcelRead().getExcelContent(fileName); 
 	}
 	
+	@DataProvider(name="Cyclos")
+	public Object[][] getExcelcontent(){
+		String Filename="C:\\Users\\IBM\\Desktop\\Book1.xlsx";
+		return new ApachePOIExcelRead().getExcelContent(Filename);
+		
+	}
+	
 	@DataProvider(name = "xls-inputs")
 	public Object[][] getXLSData(){
 		// ensure you will have the title as first line in the file 

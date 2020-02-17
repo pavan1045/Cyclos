@@ -8,7 +8,7 @@ public interface Driver {
 	String PHANTOM="";
 	
 	// PATH 
-	String CHROME_PATH="E:\\Selenium Training\\Selenium jars\\chromedriver.exe";
+	String CHROME_PATH="E:\\selenium Traning\\selenium jar\\chromedriver.exe";
 	String FIREFOX_PATH ="";
 	String IE_PATH ="";
 	String PHANTOM_PATH="";

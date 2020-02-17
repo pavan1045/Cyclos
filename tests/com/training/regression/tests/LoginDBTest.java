@@ -59,10 +59,10 @@ public class LoginDBTest {
 		// for demonstration 
 //		genericMethods.getElement("login", "id"); 
 				
-		loginPOM.sendUserName(userName);
+		loginPOM.sendLoginName(userName);
 		
 		loginPOM.sendPassword(password);
-		loginPOM.clickLoginBtn();
+		loginPOM.clickSubmit();
 		
 		screenShot.captureScreenShot(userName);
 
